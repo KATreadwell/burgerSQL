@@ -1,0 +1,37 @@
+<h1>BURGERS!</h1>
+
+<div class="burgers">
+  <div class="row">
+    <div class="col-4">
+      <h2>Burgers Waiting to be Devoured:</h2>
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-devoured devoured=false}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col4">
+      <h2>Devoured Burgers:</h2>
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-devoured devoured=true}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-4">
+      <form class="create-form">
+        <h2>Enter the name of a burger you would like to eat!</h2>
+        <div class="form-group">
+          <label for="burgerInput">Burger Name:</label>
+          <input type="text" id="burgerInput" name="name">
+        </div>
+      </form>
+      <button type="submit" id="submit">Add Burger</button>
+    </div>

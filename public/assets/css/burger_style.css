@@ -1,0 +1,40 @@
+body{
+    background-image: url("/assets/img/burger_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li {
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .create-update-form {
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+ #submit{
+   font-weight: bolder;
+   padding: 5px;
+ }
+
+ .devour-burger{
+   font-weight: bolder;
+ }
+
+ .burgers{
+  flex-direction: column;
+ }
+
+
