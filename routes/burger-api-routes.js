@@ -19,7 +19,7 @@ module.exports = function(app) {
     app.put("/api/burgers", function(req, res) {
         db.Burger.update({
             name: req.body.name,
-            devoured: req.body.devoured
+            // devoured: req.body.devoured
         }, {
             where: {
                 id: req.body.id
