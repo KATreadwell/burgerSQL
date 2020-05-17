@@ -1,3 +1,5 @@
+
+let db = require('./models')
 const express = require('express');
 
 let PORT = process.env.PORT || 8080;
@@ -21,3 +23,9 @@ app.use(routes);
 app.listen(PORT, function(){
     console.log("Server listening on: http://localhost:" + PORT);
 });
+
+db.sequelize.sync({ force: true }).then(function() {
+    app.listen(PORT, function() {
+        console.log("Listening on port %s", PORT);
+    });
+  });
