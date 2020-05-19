@@ -16,7 +16,7 @@ $(function() {
       let isDevoured = $(this).data("isDevoured");
 
       let isDevouredState = {
-        devoured: isDevoured
+        devoured: !isDevoured
       };
      
       $.ajax("/api/burgers/" + id, {
