@@ -21,7 +21,8 @@ app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 //setup routes
-require("./routes/burger-api-routes")(app);
+var routes = require("./controllers/burgers_controller");
+app.use(routes);
 
 // app.use(routes);
 
@@ -31,6 +32,6 @@ require("./routes/burger-api-routes")(app);
 
 db.sequelize.sync({ force: true }).then(function() {
     app.listen(PORT, function() {
-        console.log("Listening on port %s", PORT);
+        console.log("Server listening on: http://localhost:" + PORT);
     });
   });
