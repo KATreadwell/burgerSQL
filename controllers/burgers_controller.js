@@ -10,7 +10,8 @@ router.get("/", function (req, res) {
     console.log("got this far")
     db.Burger.findAll({}).then(function (dbBurger) {
         console.log("got this far 2")
-        res.json(dbBurger);
+        // res.json(dbBurger);
+        res.render("index", dbBurger)
     });
 });
 
